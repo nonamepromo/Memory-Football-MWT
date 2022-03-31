@@ -1,58 +1,9 @@
 import { setStyle } from "../utils/setStyle";
-import { Memory } from "./Memory";
+import { TEAMS } from "../utils/const";
 
 function Carta() {
 
-    const array_teams = [
-        {
-            name: 'Atalanta',
-            img: './src/assets/cards/Atalanta.png'
-        },
-        {
-            name: 'Atalanta',
-            img: './src/assets/cards/Atalanta.png'
-        },
-        {
-            name: 'Torino',
-            img: './src/assets/cards/Torino.png'
-        },
-        {
-            name: 'Torino',
-            img: './src/assets/cards/Torino.png'
-        },
-        {
-            name: 'Inter',
-            img: './src/assets/cards/Inter.png'
-        },
-        {
-            name: 'Inter',
-            img: './src/assets/cards/Inter.png'
-        },
-        {
-            name: 'Juventus',
-            img: './src/assets/cards/Juventus.png'
-        },
-        {
-            name: 'Juventus',
-            img: './src/assets/cards/Juventus.png'
-        },
-        {
-            name: 'Milan',
-            img: './src/assets/cards/Milan.png'
-        },
-        {
-            name: 'Milan',
-            img: './src/assets/cards/Milan.png'
-        },
-        {
-            name: 'Parma',
-            img: './src/assets/cards/Parma.png'
-        },
-        {
-            name: 'Parma',
-            img: './src/assets/cards/Parma.png'
-        },
-    ];
+    const array_teams = TEAMS;
 
     var section = document.getElementById("mwt_project_game");
 
@@ -126,7 +77,6 @@ function Carta() {
 
     this.scopri = scopri;
     this.copri = copri;
-    this.array_teams = array_teams;
 }
 
 export default Carta;

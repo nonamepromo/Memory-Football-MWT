@@ -1,6 +1,6 @@
 import CounterErrori from "./CounterErrori";
 import CreaBottone from "./RicaricaBtn";
-import Carta from "./Carta";
+import Mazzo from "./Mazzo";
 import { setStyle } from "../utils/setStyle";
 
 export function Memory() {
@@ -24,7 +24,7 @@ export function Memory() {
     let primaCarta, secondaCarta;
     let errore = -1;
 
-    const carta = new Carta();
+    const mazzo = new Mazzo();
 
     const collection = document.getElementsByClassName("carta-univaq");
     Object.entries(collection).map((object) => {
@@ -37,7 +37,7 @@ export function Memory() {
         if (this === primaCarta) return;
 
         var div = document.getElementById(id.currentTarget.myParam);
-        carta.scopri(div);
+        mazzo.scopri(div);
         if (!cartaGirata) {
           // first click
           cartaGirata = true;
@@ -66,8 +66,8 @@ export function Memory() {
 
         setTimeout(() => {
         
-        carta.copri(primaCarta);
-        carta.copri(secondaCarta);
+        mazzo.copri(primaCarta);
+        mazzo.copri(secondaCarta);
 
         resetCarta();
         }, 800);

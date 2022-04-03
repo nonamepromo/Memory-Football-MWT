@@ -1,7 +1,7 @@
 import { setStyle } from "../utils/setStyle";
 import { TEAMS } from "../utils/const";
 
-function Carta() {
+function Mazzo() {
 
     const array_teams = TEAMS;
 
@@ -79,4 +79,4 @@ function Carta() {
     this.copri = copri;
 }
 
-export default Carta;
+export default Mazzo;

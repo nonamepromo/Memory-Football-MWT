@@ -5,14 +5,7 @@ import { setStyle } from "../utils/setStyle";
 
 export function Memory() {
     const mwt_project_game = document.createElement('section');
-    setStyle(mwt_project_game, {
-        width: '640px',
-        height: '640px',
-        margin: 'auto',
-        display: 'flex',
-        flexWrap: 'wrap',
-        perspective: '1000px',
-    });
+    setStyle(mwt_project_game, styles.MWT_SECTION_GAME);
     mwt_project_game.setAttribute("id", "mwt_project_game" )
     document.body.appendChild(mwt_project_game);
 
@@ -97,3 +90,14 @@ export function Memory() {
 
     this.mwt_project_game = mwt_project_game;
 }
+
+const styles = {
+    MWT_SECTION_GAME: {
+        width: '640px',
+        height: '640px',
+        margin: 'auto',
+        display: 'flex',
+        flexWrap: 'wrap',
+        perspective: '1000px',
+    }
+};

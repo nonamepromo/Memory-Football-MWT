@@ -9,52 +9,20 @@ function Mazzo() {
 
     for(let i = 0; i < array_teams.length; i++){
         const carta_univaq = document.createElement('div');
-        setStyle(carta_univaq, {
-            width: 'calc(25% - 10px)',
-            height: 'calc(33.333% - 10px)',
-            margin: '5px',
-            position: 'relative',
-            transform: 'scale(1)',
-            transformStyle: 'preserve-3d',
-            transition: 'transform .5s',
-            boxShadow: '1px 1px 1px rgba(0,0,0,.3)',
-            padding: '0',
-            boxSizing: 'border-box',
-        })
+        setStyle(carta_univaq, styles.CARTA_UNIVAQ)
         carta_univaq.setAttribute("class", "carta-univaq");
         carta_univaq.setAttribute("id", i);
         carta_univaq.setAttribute("data-framework", array_teams[i].name);
 
         const fronteCarta = document.createElement('img');
-        setStyle(fronteCarta, {
-            width: '100%',
-            height: '100%',
-            padding: '20px',
-            position: 'absolute',
-            borderRadius: '5px',
-            background: '#1C7CCC',
-            backfaceVisibility: 'hidden',
-            transform: 'rotateY(180deg)',
-            margin: '0',
-            boxSizing: 'border-box',
-        });
+        setStyle(fronteCarta, styles.FRONTE_CARTA);
         fronteCarta.setAttribute("class", "fronte-carta");
         fronteCarta.setAttribute("src", array_teams[i].img);
         fronteCarta.setAttribute("alt", array_teams[i].name);
         carta_univaq.appendChild(fronteCarta);
 
         const retroCarta = document.createElement('img');
-        setStyle(retroCarta, {
-            width: '100%',
-            height: '100%',
-            padding: '20px',
-            position: 'absolute',
-            borderRadius: '5px',
-            background: '#1C7CCC',
-            backfaceVisibility: 'hidden',
-            margin: '0',
-            boxSizing: 'border-box',
-        });
+        setStyle(retroCarta, styles.RETRO_CARTA);
         retroCarta.setAttribute("class", "retro-carta");
         retroCarta.setAttribute("src", './src/assets/cards/Univaq.png');
         retroCarta.setAttribute("alt", 'Univaq Logo');
@@ -80,3 +48,41 @@ function Mazzo() {
 }
 
 export default Mazzo;
+
+const styles = {
+    CARTA_UNIVAQ: {
+        width: 'calc(25% - 10px)',
+        height: 'calc(33.333% - 10px)',
+        margin: '5px',
+        position: 'relative',
+        transform: 'scale(1)',
+        transformStyle: 'preserve-3d',
+        transition: 'transform .5s',
+        boxShadow: '1px 1px 1px rgba(0,0,0,.3)',
+        padding: '0',
+        boxSizing: 'border-box',
+    },
+    FRONTE_CARTA: {
+        width: '100%',
+        height: '100%',
+        padding: '20px',
+        position: 'absolute',
+        borderRadius: '5px',
+        background: '#1C7CCC',
+        backfaceVisibility: 'hidden',
+        transform: 'rotateY(180deg)',
+        margin: '0',
+        boxSizing: 'border-box',
+    },
+    RETRO_CARTA: {
+        width: '100%',
+        height: '100%',
+        padding: '20px',
+        position: 'absolute',
+        borderRadius: '5px',
+        background: '#1C7CCC',
+        backfaceVisibility: 'hidden',
+        margin: '0',
+        boxSizing: 'border-box',
+    }
+};
